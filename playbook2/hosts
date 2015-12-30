@@ -1,7 +1,7 @@
-#testserver ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222 \
+testserver ansible_ssh_host=127.0.0.1 ansible_ssh_port=2223
 # ansible_ssh_user=vgubuntu \
 [webservers]
-127.0.0.1:2223
+testserver
 
 #[default]
 #127.0.0.1:2222

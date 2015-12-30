@@ -1,7 +1,10 @@
-- name: Configure webserver with nginx
+- name: Install horizon prerequisites
   hosts: webservers
   sudo: True
+  vars:
+    apt_package: [git, python-dev, python-virtualenv, libssl-dev, libffi-dev]
   tasks:
-    - name: install nginx
-      apt: name=nginx update_cache=yes
+    - name: install deps
+      apt: name={{item}} update_cache=yes
+      with_items: "{{apt_package}}"
       sudo: yes

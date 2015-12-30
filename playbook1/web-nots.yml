@@ -4,4 +4,4 @@
   tasks:
     - name: install nginx
       apt: name=nginx update_cache=yes
-      sudo: yes
+      sudo: True
